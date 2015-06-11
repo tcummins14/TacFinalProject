@@ -1,0 +1,173 @@
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+
+/*  GRID OF FOUR   ============================================================================= */
+
+	
+.span_4_of_4 {
+	width: 98.5%; 
+}
+
+.span_3_of_4 {
+	width: 74.6%; 
+}
+
+.span_2_of_4 {
+	width: 49.2%; 
+}
+
+.span_1_of_4 {
+	width: 23.8%;
+    background-color: hsla(69, 54%, 73%, 1);
+    padding: 1em;
+}
+
+
+/*  GO FULL WIDTH -Tablet- AT LESS THAN 768 PIXELS */
+
+@media only screen and (max-width: 900px) {
+	.span_4_of_4 {
+		width: 100%; 
+	}
+	.span_3_of_4 {
+		width: 100%; 
+	}
+	.span_2_of_4 {
+		width: 100%; 
+	}
+	.span_1_of_4 {
+		width: 100%;
+        text-align: center;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+    #bigger {
+        display: none;
+    }
+}
+
+/* Match Height =======================================================*/
+
+.flexbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.flexbox .col {
+  flex: auto;
+  flex-direction: column;
+}
+.flexbox .col span_3_of_4{
+  order: 1;
+  flex-grow: 2;
+}
+.flexbox .col span_1_of_4{
+  background-color: hsla(69, 54%, 73%, 1);
+  order: 0;
+}
+
+/* Design Colors, etc  ============================================================================= */
+
+
+a { color: black;
+}
+
+a:link { 
+    text-decoration: none;
+    color: black;
+     
+}
+
+a:visited { 
+     color: hsla(332, 84%, 35%, 1);
+}
+
+a:hover { 
+    text-decoration: none;
+    color: hsla(332, 84%, 35%, 1);
+}
+
+a:active { 
+    
+}
+
+.list1 {
+    list-style: none;
+    line-height: 200%;
+    padding: 1em;
+}
+
+.list2 {
+    padding: 2em 10em 2em 2em;
+}
+
+@media only screen and (max-width: 900px) {
+	.list2 {
+		padding: 2em; 
+	}
+}
+
+.quote {
+    font-style: italic;
+    font-size: 125%;
+}
+
+body {
+    text-align: left;
+    font-family: 'Questrial', sans-serif;
+}
+
+p.thick { 
+    width: 100%; 
+    height: 2em;
+    text-align: center;
+    background-color: #cdde90;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase; 
+    color: #b41847;
+    text-align: center;
+}
+
+.popUp {
+    background-color: hsla(77, 53%, 87%, 1);
+    padding: 1em;
+    margin: 0 1.6% 1% 0;
+}
+
+section p {
+    text-align: left;
+}
+
+img {max-width:100%
+}
+
+img.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+
